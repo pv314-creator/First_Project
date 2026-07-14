@@ -9,7 +9,7 @@ const app = new App({
   socketMode: true
 });
 
-app.command("/dsb-ping", async ({ command, ack, respond }) => {
+app.command("/dsb-ping-1", async ({ command, ack, respond }) => {
   const start = Date.now();
   await ack();
   const latency = Date.now() - start;
@@ -21,17 +21,17 @@ app.command("/dsb-ping", async ({ command, ack, respond }) => {
   console.log("bot is running!");
 })();
 
-app.command("/dsb-help", async ({ ack, respond }) => {
+app.command("/dsb-help-1", async ({ ack, respond }) => {
   await ack();
   await respond({
     text:
 `Available Commands:
-/dsb-ping - Check bot latency
-/dsb-catfact - Get a cat fact`
+/dsb-ping-1 - Check bot latency
+/dsb-catfact-1 - Get a cat fact`
   });
 });
 
-app.command("/dsb-catfact", async ({ ack, respond }) => {
+app.command("/dsb-catfact-1", async ({ ack, respond }) => {
   await ack();
 
   try {
@@ -42,7 +42,7 @@ app.command("/dsb-catfact", async ({ ack, respond }) => {
   }
 });
 
-app.command("/dsb-joke", async ({ ack, respond }) => {
+app.command("/dsb-joke-1", async ({ ack, respond }) => {
   await ack();
 
   try {
